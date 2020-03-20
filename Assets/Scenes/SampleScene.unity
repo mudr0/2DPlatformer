@@ -349,7 +349,6 @@ GameObject:
   m_Component:
   - component: {fileID: 209259685}
   - component: {fileID: 209259684}
-  - component: {fileID: 209259686}
   - component: {fileID: 209259687}
   - component: {fileID: 209259688}
   - component: {fileID: 209259689}
@@ -425,20 +424,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &209259686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209259683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e231cea3f0886d94395127c7885163e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _path: {fileID: 14807102}
-  _speed: 0.03
 --- !u!70 &209259687
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -486,6 +471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af350c3001d58544bd61551044f2995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _path: {fileID: 14807102}
+  _speed: 0.03
 --- !u!50 &209259690
 Rigidbody2D:
   serializedVersion: 4
@@ -2515,6 +2502,8 @@ GameObject:
   - component: {fileID: 1263368400}
   - component: {fileID: 1263368402}
   - component: {fileID: 1263368403}
+  - component: {fileID: 1263368404}
+  - component: {fileID: 1263368405}
   m_Layer: 0
   m_Name: Woodcutter
   m_TagString: Untagged
@@ -2709,6 +2698,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4296953ef28a30d419e96e2a4d6e0a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1263368404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263368395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b244d9919a298b49bdb0d43aed3c21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coin: {fileID: 3237194226660107899, guid: 726eb6ecd8a235648965ddf0d64ba3fa, type: 3}
+--- !u!114 &1263368405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263368395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f123f4029c36a054a97764ff899210b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallet: {fileID: 1263368404}
+  _collect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1263368404}
+        m_MethodName: AddCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1316929736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,7 +2927,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1544141721}
-  - component: {fileID: 1544141720}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -2906,19 +2934,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1544141720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544141719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b244d9919a298b49bdb0d43aed3c21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _coin: {fileID: 3237194226660107899, guid: 726eb6ecd8a235648965ddf0d64ba3fa, type: 3}
 --- !u!4 &1544141721
 Transform:
   m_ObjectHideFlags: 0

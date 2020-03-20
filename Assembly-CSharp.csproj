@@ -63,12 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Coin.cs" />
-    <Compile Include="Assets\Scripts\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\CoinCollector.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\ObjectDestroyer.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Wallet.cs" />
-    <Compile Include="Assets\Scripts\WaypointMovement.cs" />
     <Compile Include="Assets\Scripts\WinPoint.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Lev/Documents/Unity Projects/Animation/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

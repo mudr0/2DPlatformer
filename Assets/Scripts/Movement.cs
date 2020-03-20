@@ -21,21 +21,16 @@ public class Movement : MonoBehaviour
         _boxCollider = GetComponent<BoxCollider2D>();
     }
 
-
     private void Update()
     {
         _animator.SetFloat("Speed", 0f);
         if (Input.GetKey(KeyCode.D))
         {
-            _renderer.flipX = false;
-            _animator.SetFloat("Speed", 1f);
-            transform.Translate(new Vector3(_speed * Time.deltaTime, 0, 0));
+            Move(false, 1);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            _renderer.flipX = true;
-            _animator.SetFloat("Speed", 1f);
-            transform.Translate(new Vector3(_speed * Time.deltaTime * -1, 0, 0));
+            Move(true, -1);
         }
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
@@ -47,5 +42,11 @@ public class Movement : MonoBehaviour
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(_boxCollider.bounds.center, _boxCollider.bounds.size, 0f, Vector2.down, 1f,_layerMask);
             return raycastHit.collider != null;
+    }
+    private void Move(bool xAnimationFlip, int direction)
+    {
+        _renderer.flipX = xAnimationFlip;
+        _animator.SetFloat("Speed", 1f);
+        transform.Translate(new Vector3(_speed * Time.deltaTime * direction, 0, 0));
     }
 }

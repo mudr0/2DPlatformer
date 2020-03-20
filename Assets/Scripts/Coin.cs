@@ -5,15 +5,9 @@ using UnityEngine.Events;
 
 public class Coin : MonoBehaviour
 {
-    public int Value;
     [SerializeField] private UnityEvent _collected;
 
-
-    public event UnityAction Collected
-    {
-        add => _collected.AddListener(value);
-        remove => _collected.RemoveListener(value);
-    }
+    public int Value;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
