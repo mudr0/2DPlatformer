@@ -987,6 +987,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3237194226660107899, guid: 726eb6ecd8a235648965ddf0d64ba3fa,
+        type: 3}
+      propertyPath: Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3237194226660107900, guid: 726eb6ecd8a235648965ddf0d64ba3fa,
         type: 3}
       propertyPath: m_Name
@@ -2501,7 +2506,6 @@ GameObject:
   - component: {fileID: 1263368401}
   - component: {fileID: 1263368400}
   - component: {fileID: 1263368402}
-  - component: {fileID: 1263368403}
   - component: {fileID: 1263368404}
   - component: {fileID: 1263368405}
   m_Layer: 0
@@ -2672,32 +2676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb7a5f4827f5a14381a6dc8c13d21b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hittedByEnemy:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1263368403}
-        m_MethodName: Destroy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1263368403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263368395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4296953ef28a30d419e96e2a4d6e0a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1263368404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2710,7 +2688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b244d9919a298b49bdb0d43aed3c21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: 3237194226660107899, guid: 726eb6ecd8a235648965ddf0d64ba3fa, type: 3}
+  _coinCollector: {fileID: 1263368405}
 --- !u!114 &1263368405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2723,21 +2701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f123f4029c36a054a97764ff899210b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wallet: {fileID: 1263368404}
-  _collect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1263368404}
-        m_MethodName: AddCoin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  _value: 1
 --- !u!1 &1316929736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,7 +2715,6 @@ GameObject:
   - component: {fileID: 1316929738}
   - component: {fileID: 1316929737}
   - component: {fileID: 1316929741}
-  - component: {fileID: 1316929742}
   m_Layer: 0
   m_Name: Crown
   m_TagString: Untagged
@@ -2878,32 +2841,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25aa45f99858b044b8134b19e523392c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _reached:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1316929742}
-        m_MethodName: Destroy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1316929742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316929736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4296953ef28a30d419e96e2a4d6e0a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1483230123 stripped

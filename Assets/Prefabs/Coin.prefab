@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3237194226660107899}
   - component: {fileID: 3237194226660107896}
   - component: {fileID: 7883365252405673660}
-  - component: {fileID: 7791598837447178276}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -97,20 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedd40e180eb1c44fac579d1603f92a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7791598837447178276}
-        m_MethodName: Destroy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   Value: 1
 --- !u!58 &3237194226660107896
 CircleCollider2D:
@@ -147,15 +132,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7791598837447178276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3237194226660107900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4296953ef28a30d419e96e2a4d6e0a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

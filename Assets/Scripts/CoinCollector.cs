@@ -5,14 +5,16 @@ using UnityEngine.Events;
 
 public class CoinCollector : MonoBehaviour
 {
-    [SerializeField] private Wallet _wallet;
-    [SerializeField] private UnityEvent _collect;
+    [SerializeField] private int _value;
+
+    public event UnityAction<Coin> CoinCollected;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Coin>(out Coin coin))
         {
-            _collect.Invoke();
+            Destroy(coin.gameObject);
+            CoinCollected?.Invoke(coin);
         }
     }
 }
