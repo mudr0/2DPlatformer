@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Coin : MonoBehaviour
 {
-    public int Value;
+    public int Value { get; private set; }
 }
