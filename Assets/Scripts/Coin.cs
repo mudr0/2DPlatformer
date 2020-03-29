@@ -4,5 +4,17 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int Value { get; private set; }
+    [SerializeField] private int _value;
+
+    public int Value
+    {
+        get
+        {
+            return _value;
+        }
+        private set
+        {
+            _value = value;
+        }
+    }
 }
